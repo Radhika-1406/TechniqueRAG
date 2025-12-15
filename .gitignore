@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Node
 node_modules/
 
@@ -9,4 +10,7 @@ __pycache__/
 model_cache/
 
 # Environment
+=======
+node_modules/
+>>>>>>> 47227574d37bb57f2fb2d578a8c9afb3fbc1f6f3
 .env

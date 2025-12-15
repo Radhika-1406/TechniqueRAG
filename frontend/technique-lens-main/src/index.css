@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TECHNIQUERAG Cyber Theme Design System 
+All colors MUST be HSL. Cyber aesthetic with neon glows.
+*/
+
+@layer base {
+  :root {
+    /* Cyber Dark Theme (default) */
+    --background: 240 10% 5%;
+    --foreground: 180 100% 95%;
+
+    --card: 240 10% 8%;
+    --card-foreground: 180 100% 95%;
+
+    --popover: 240 10% 8%;
+    --popover-foreground: 180 100% 95%;
+
+    --primary: 180 100% 50%;
+    --primary-foreground: 240 10% 5%;
+
+    --secondary: 280 100% 65%;
+    --secondary-foreground: 240 10% 5%;
+
+    --muted: 240 10% 15%;
+    --muted-foreground: 180 20% 60%;
+
+    --accent: 320 100% 60%;
+    --accent-foreground: 240 10% 5%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 15%;
+    --input: 240 10% 12%;
+    --ring: 180 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Cyber-specific tokens */
+    --cyber-glow: 180 100% 50%;
+    --cyber-glow-secondary: 280 100% 65%;
+    --cyber-surface: 240 10% 10%;
+    --cyber-surface-elevated: 240 10% 12%;
+    
+    /* Gradients */
+    --gradient-cyber: linear-gradient(135deg, hsl(180 100% 50% / 0.2), hsl(280 100% 65% / 0.2));
+    --gradient-hero: linear-gradient(180deg, hsl(240 10% 5%), hsl(240 10% 8%));
+    
+    /* Shadows & Glows */
+    --glow-cyan: 0 0 20px hsl(180 100% 50% / 0.3), 0 0 40px hsl(180 100% 50% / 0.1);
+    --glow-purple: 0 0 20px hsl(280 100% 65% / 0.3), 0 0 40px hsl(280 100% 65% / 0.1);
+    --glow-magenta: 0 0 20px hsl(320 100% 60% / 0.3), 0 0 40px hsl(320 100% 60% / 0.1);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .black {
+    /* Pure Black Theme */
+    --background: 0 0% 0%;
+    --foreground: 180 100% 95%;
+
+    --card: 0 0% 3%;
+    --card-foreground: 180 100% 95%;
+
+    --popover: 0 0% 3%;
+    --popover-foreground: 180 100% 95%;
+
+    --cyber-surface: 0 0% 5%;
+    --cyber-surface-elevated: 0 0% 7%;
+
+    --border: 0 0% 10%;
+    --input: 0 0% 8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbars globally */
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  /* Cyber glow effects */
+  .glow-cyan {
+    box-shadow: var(--glow-cyan);
+  }
+
+  .glow-purple {
+    box-shadow: var(--glow-purple);
+  }
+
+  .glow-magenta {
+    box-shadow: var(--glow-magenta);
+  }
+
+  .text-glow-cyan {
+    text-shadow: 0 0 10px hsl(180 100% 50% / 0.5);
+  }
+
+  .text-glow-purple {
+    text-shadow: 0 0 10px hsl(280 100% 65% / 0.5);
+  }
+
+  /* Gradient backgrounds */
+  .bg-gradient-cyber {
+    background: var(--gradient-cyber);
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  /* Cyber surface */
+  .bg-cyber-surface {
+    background: hsl(var(--cyber-surface));
+  }
+
+  .bg-cyber-elevated {
+    background: hsl(var(--cyber-surface-elevated));
+  }
+
+  /* Animation utilities */
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  /* Hover scale effect */
+  .hover-lift {
+    @apply transition-smooth;
+  }
+
+  .hover-lift:hover {
+    @apply -translate-y-1;
+  }
+}
