@@ -1,0 +1,12 @@
+# Node
+node_modules/
+
+# Python
+venv/
+__pycache__/
+
+# ML cache
+model_cache/
+
+# Environment
+.env

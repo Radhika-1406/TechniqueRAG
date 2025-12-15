@@ -1,0 +1,17 @@
+[
+  {
+    "id": "T1566",
+    "name": "Phishing",
+    "description": "Adversaries send phishing messages to steal credentials or deliver malware."
+  },
+  {
+    "id": "T1059",
+    "name": "Command and Scripting Interpreter",
+    "description": "Adversaries abuse command-line interfaces or scripting languages."
+  },
+  {
+    "id": "T1078",
+    "name": "Valid Accounts",
+    "description": "Adversaries use stolen credentials to access systems."
+  }
+]
